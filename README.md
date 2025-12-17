@@ -59,19 +59,19 @@ Y listo ya deberías hacer push en tu repositorio local sin la necesidad de usar
 #### No me deja hacer git clone
 
 Eso es porque seguramente no tengas configurada la identidad del agente. Comprueba si existe con
-`
+```
 ssh-add -l
-`
+```
 En el caso de que no (lo más probable) debes ejecutar 
-`
+```
 eval "$(ssh-agent -s)
-`
+```
 para comprobar el pid del agente (si existe). Así ahora simplemente asociaremos la identidad de este con el repositorio.
-`
+```
 ssh-add /home/nombre_usuario/.ssh/nombre_fichero
-`
+```
 Ahora si haces 
-`
+```
 ssh-add -l
-`
+```
 te debería salir que está todo correctamente configurado. Ahora ya puedes clonar tu repositorio y hacer push sin la necesidad de introducir el token cada vez.
