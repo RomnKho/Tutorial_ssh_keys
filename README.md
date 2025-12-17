@@ -33,22 +33,22 @@ y ya podrás hacer push sin la necesidad de ingresar token cada vez.
 #### Repositorio ya creado
 
 Si ya tienes el repositorio creado con https lo único que tienes que hacer es cambiar el destino del push y del fetch. Para ello, desde la terminal entra en tu repositorio clonado y ejecuta lo siguiente.
-`
+```
 git remote -v
-`
+```
 Esto generará una salida como esta.
 ```
 origin  https://github.com/nombre_usuario/nombre_repo.git (fetch)
 origin  https://github.com/nombre_usuario/nombre_repo.git (push)
 ```
 Esto confirma que esté clonado con https. Ahora lo cambiaremos a ssh de la siguiente forma.
-`
+```
 git remote set-url origin git@github.com:nombre_usuario/nombre_repo.git
-`
+```
 Comprobamos de nuevo a que está asociado el fetch y el push con
-`
+```
 git remote -v
-`
+```
 Y deberá salir algo por el estilo.
 ```
 origin  git@github.com:nombre_usuario/nombre_repo.git (fetch)
