@@ -5,15 +5,15 @@ Las claves ssh sirven para hacer push desde tu repositorio local y que se identi
 Los pasos para configurarlo son los siguientes (solo para un repositorio):
 
 Abre la terminal y ejecuta el siguiente comando. Ten en cuenta que debe ser con el correo vinculado a tu github.
-`
+```
 ssh-keygen -t ed25519 -C "mi_correo@ejemplo.com"
-`
+```
 Esto creará su clave ssh. Te pedirá donde guardarlo por lo que puedes decidir en donde hacerlo pero, por lo general, guarda tus claves en /home/nombre_usuario/.ssh/nombre_fichero. Te pedirá además configurar una passphrase, esto es una contraseña que puedes o no poner.
 
 Después de haber creado la clave dirigete a la carpeta donde creaste la clave y comprueba que al archivo se ha creado correctamente.
-`
+```
 cd /home/nombre_usuario/.ssh
-`
+```
 Si está todo bien ahora dirigete a github/ajustes/claves ssh y gpg y dale a crear una nueva clave ssh. Ahí deberás pegar en el cuadrado grande lo que está dentro del archivo .pub que se creó antes. Se tiene que parecer a lo siguiente.
 ```
 SHA256: contraseña... mi_correo@ejemplo.com
@@ -23,9 +23,9 @@ Ahora solo falta crear tu repositorio en github y clonarlo. Para esto, no copies
 git@github.com:nombre_usuario/nombre_repo.git
 ```
 Clona el repositorio con
-`
+```
 git clone git@github.com:nombre_usuario/nombre_repo.git
-`
+```
 y ya podrás hacer push sin la necesidad de ingresar token cada vez.
 
 ### Problemas comúnes
@@ -53,7 +53,6 @@ Y deberá salir algo por el estilo.
 ```
 origin  git@github.com:nombre_usuario/nombre_repo.git (fetch)
 origin  git@github.com:nombre_usuario/nombre_repo.git (push)
-
 ```
 Y listo ya deberías hacer push en tu repositorio local sin la necesidad de usar token. Aquí no hace falta que clones el repositorio de nuevo.
 
